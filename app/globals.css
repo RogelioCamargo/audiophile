@@ -13,6 +13,16 @@
   opacity: 0.1;
 }
 
+.footer-nodge {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 4px;
+	width: 101px;
+	background-color: #D87D4A
+}
+
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;

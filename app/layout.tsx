@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={manrope.className}>
-        <header className="border- flex items-center justify-between bg-black-light px-6 py-8 text-white">
+        <header className="flex items-center justify-between bg-black-light px-6 py-8 text-white">
           <div>
             <Image
               src="/shared/tablet/icon-hamburger.svg"
@@ -46,6 +46,59 @@ export default function RootLayout({
         </header>
         <div className="seperator"></div>
         {children}
+        <footer className="relative flex flex-col gap-12 bg-black-light px-6 py-[52px] text-white">
+          <div className="footer-nodge"></div>
+          <div>
+            <Image
+              className="mx-auto"
+              src="/shared/desktop/logo.svg"
+              width={143}
+              height={25}
+              alt="audiophile logo"
+            />
+          </div>
+          <nav className="flex flex-col items-center gap-4 text-[13px] font-bold uppercase leading-[25px] tracking-[2px]">
+            <Link href="#">Home</Link>
+            <Link href="#">Headphones</Link>
+            <Link href="#">Speakers</Link>
+            <Link href="#">Earphones</Link>
+          </nav>
+          <div className="text-center text-[15px] leading-[25px] opacity-50">
+            Audiophile is an all in one stop to fulfill your audio needs.
+            We&apos;re a small team of music lovers and sound specialists who
+            are devoted to helping you get the most out of personal audio. Come
+            and visit our demo facility - we&apos;re open 7 days a week.
+          </div>
+          <div className="text-center text-[13px] leading-[25px] opacity-50">
+            Copyright 2021. All Rights Reserved
+          </div>
+          <ul className="flex justify-center gap-4">
+            <li>
+              <Image
+                src="/shared/desktop/icon-facebook.svg"
+                width={24}
+                height={24}
+                alt="facebook icon"
+              />
+            </li>
+            <li>
+              <Image
+                src="/shared/desktop/icon-twitter.svg"
+                width={24}
+                height={24}
+                alt="twitter icon"
+              />
+            </li>
+            <li>
+              <Image
+                src="/shared/desktop/icon-instagram.svg"
+                width={24}
+                height={24}
+                alt="instagram icon"
+              />
+            </li>
+          </ul>
+        </footer>
       </body>
     </html>
   );
