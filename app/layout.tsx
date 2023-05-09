@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={manrope.className}>
-        <header className="flex items-center justify-between bg-black-light px-6 py-8 text-white z-10">
+        <header className="z-10 flex items-center justify-between bg-transparent px-6 py-8 text-white h-[90px]">
           <div>
             <Image
               src="/shared/tablet/icon-hamburger.svg"
