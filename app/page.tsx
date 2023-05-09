@@ -16,29 +16,69 @@ export default function Home() {
           for the passionate music enthusiast.
         </p>
         <Button>See Product</Button>
-				<picture className="absolute top-0 -z-10">
-					<source srcSet="/home/tablet/image-header.jpg" media="(min-width: 768px)" />
-					<img src="/home/mobile/image-header.jpg" alt="xx99 mark ii headphones" />
-				</picture>
+        <picture className="absolute top-0 -z-10">
+          <source
+            srcSet="/home/tablet/image-header.jpg"
+            media="(min-width: 768px)"
+          />
+          <img
+            src="/home/mobile/image-header.jpg"
+            alt="xx99 mark ii headphones"
+          />
+        </picture>
       </section>
-			<section>
-				<ShopCategory />
-			</section>
+      <section className="flex flex-col gap-4 my-10">
+        <ShopCategory
+          imageUrl="/shared/desktop/image-category-thumbnail-headphones.png"
+          categoryName="Headphones"
+        />
+        <ShopCategory
+          imageUrl="/shared/desktop/image-category-thumbnail-speakers.png"
+          categoryName="Speakers"
+        />
+        <ShopCategory
+          imageUrl="/shared/desktop/image-category-thumbnail-earphones.png"
+          categoryName="Earphones"
+        />
+      </section>
     </main>
   );
 }
 
-const ShopCategory = () => (
-		<div className="uppercase">
-			<h2 className="">Headphones</h2>
-			<div>
-				<div className="">Shop</div>
-				<Image src="/shared/desktop/icon-arrow-right.svg" alt="" width={10} height={10} />
-			</div>
-		</div>
-	);
+const ShopCategory = ({
+  imageUrl,
+  categoryName,
+}: {
+  imageUrl: string;
+  categoryName: string;
+}) => (
+  <div className="relative mx-auto h-56 w-[327px] font-bold uppercase">
+    <Image
+      src={imageUrl}
+      alt="headphone category"
+      height={160}
+      width={160}
+      className="mx-auto"
+    />
+    <h2 className="mb-4 text-center text-[15px] leading-[20px] tracking-[1px]">
+      {categoryName}
+    </h2>
+    <div className="flex items-center justify-center">
+      <div className="mr-3 text-[13px] leading-[18px] tracking-[1px] opacity-50">
+        Shop
+      </div>
+      <Image
+        src="/shared/desktop/icon-arrow-right.svg"
+        alt=""
+        width={10}
+        height={10}
+      />
+    </div>
+    <div className="absolute bottom-0 -z-10 h-[165px] w-[327px] rounded-lg bg-gray-light"></div>
+  </div>
+);
 
-	// const ShopCategory = ({ children, ...props }: { children: React.ReactNode }) => (
+// const ShopCategory = ({ children, ...props }: { children: React.ReactNode }) => (
 // 		<div>
 
 // 		</div>
