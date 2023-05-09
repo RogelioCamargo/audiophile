@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={manrope.className}>
-        <header className="flex items-center justify-between bg-black-light px-6 py-8 text-white">
+        <header className="flex items-center justify-between bg-black-light px-6 py-8 text-white z-10">
           <div>
             <Image
               src="/shared/tablet/icon-hamburger.svg"
@@ -44,7 +44,7 @@ export default function RootLayout({
             />
           </div>
         </header>
-        <div className="seperator"></div>
+        <div className="seperator z-10"></div>
         {children}
         <footer className="relative flex flex-col gap-12 bg-black-light px-6 py-[52px] text-white">
           <div className="footer-nodge"></div>
