@@ -106,6 +106,31 @@ export default function Home() {
           <OutlineButton>See Product</OutlineButton>
         </div>
       </section>
+      <section className="text-center">
+        <picture>
+          <source
+            srcSet="/shared/tablet/image-best-gear.jpg"
+            media="(min-width: 768px)"
+          />
+          <img
+            src="/shared/mobile/image-best-gear.jpg"
+            alt="man enjoying music with his headphones"
+            className="mx-auto mb-10 h-[300px] w-[327px] rounded-lg"
+          />
+        </picture>
+        <h2 className="mb-8 text-[28px] font-bold uppercase leading-[28px] tracking-[1px]">
+          Bringing you the <br />
+          <span className="text-primary">best</span> audio gear
+        </h2>
+        <p className="text-[15px] leading-[25px] opacity-50 px-8 mb-[120px]">
+          Located at the heart of New York City, Audiophile is the premier store
+          for high end headphones, earphones, speakers, and audio accessories.
+          We have a large showroom and luxury demonstration rooms available for
+          you to browse and experience a wide range of our products. Stop by our
+          store to meet some of the fantastic people who make Audiophile the
+          best place to buy your portable audio equipment.
+        </p>
+      </section>
     </main>
   );
 }
