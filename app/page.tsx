@@ -1,4 +1,4 @@
-import Button from "@/components/button";
+import Button, { SecondaryButton } from "@/components/button";
 import Image from "next/image";
 
 export default function Home() {
@@ -27,7 +27,7 @@ export default function Home() {
           />
         </picture>
       </section>
-      <section className="flex flex-col gap-4 my-10">
+      <section className="my-10 flex flex-col gap-4">
         <ShopCategory
           imageUrl="/shared/desktop/image-category-thumbnail-headphones.png"
           categoryName="Headphones"
@@ -40,6 +40,35 @@ export default function Home() {
           imageUrl="/shared/desktop/image-category-thumbnail-earphones.png"
           categoryName="Earphones"
         />
+      </section>
+      <section className="relative mx-auto h-[600px] w-[327px] overflow-hidden bg-primary px-6 text-center text-white">
+        <Image
+          className="absolute -left-[147px] -top-[135px] max-w-max"
+          src="/home/desktop/pattern-circles.svg"
+          alt=""
+          height={620}
+          width={620}
+        />
+        <picture>
+          <source
+            srcSet="/home/tablet/image-speaker-zx9.png"
+            media="(min-width: 768px)"
+          />
+          <img
+            src="/home/mobile/image-speaker-zx9.png"
+            alt="zx9 speaker"
+            className="mx-auto mb-8 mt-[55px] h-[200px] w-[170px]"
+          />
+        </picture>
+        <h2 className="mb-6 text-4xl font-bold tracking-[1px]">
+          ZX9 <br />
+          SPEAKER
+        </h2>
+        <p className="text-[15px] leading-[25px] opacity-75 mb-6">
+          Upgrade to premium speakers that are phenomenally built to deliver
+          truly remarkable sound.
+        </p>
+        <SecondaryButton>See Product</SecondaryButton>
       </section>
     </main>
   );
