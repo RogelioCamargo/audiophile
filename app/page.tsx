@@ -1,4 +1,4 @@
-import Button, { SecondaryButton } from "@/components/button";
+import Button, { OutlineButton, SecondaryButton } from "@/components/button";
 import Image from "next/image";
 
 export default function Home() {
@@ -41,7 +41,7 @@ export default function Home() {
           categoryName="Earphones"
         />
       </section>
-      <section className="relative mx-auto h-[600px] w-[327px] overflow-hidden bg-primary px-6 text-center text-white">
+      <section className="relative mx-auto mb-6 h-[600px] w-[327px] overflow-hidden bg-primary px-6 text-center text-white">
         <Image
           className="absolute -left-[147px] -top-[135px] max-w-max"
           src="/home/desktop/pattern-circles.svg"
@@ -60,15 +60,30 @@ export default function Home() {
             className="mx-auto mb-8 mt-[55px] h-[200px] w-[170px]"
           />
         </picture>
-        <h2 className="mb-6 text-4xl font-bold tracking-[1px]">
+        <h2 className="mb-6 text-4xl font-bold tracking-[1px] uppercase">
           ZX9 <br />
           SPEAKER
         </h2>
-        <p className="text-[15px] leading-[25px] opacity-75 mb-6">
+        <p className="mb-6 text-[15px] leading-[25px] opacity-75">
           Upgrade to premium speakers that are phenomenally built to deliver
           truly remarkable sound.
         </p>
         <SecondaryButton>See Product</SecondaryButton>
+      </section>
+      <section className="relative mx-auto h-[320px] w-[327px] p-6 flex flex-col justify-center items-start">
+        <picture className="absolute left-0 top-0 -z-10">
+          <source
+            srcSet="/home/tablet/image-speaker-zx7.jpg"
+            media="(min-width: 768px)"
+          />
+          <img
+            src="/home/mobile/image-speaker-zx7.jpg"
+            alt="zx7 speaker"
+            className="mx-auto"
+          />
+        </picture>
+        <h2 className="z-10 text-[28px] leading-[38px] tracking-[2px] font-bold uppercase mb-8">ZX7 SPEAKER</h2>
+        <OutlineButton>See Product</OutlineButton>
       </section>
     </main>
   );
