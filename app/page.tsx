@@ -8,7 +8,7 @@ export default function Home() {
         <div className="mb-4 text-[14px] uppercase leading-[19px] tracking-[10px] opacity-50">
           New Product
         </div>
-        <h1 className="mb-6 text-4xl font-bold uppercase tracking-[1.28px]">
+        <h1 className="mb-6 text-4xl font-bold uppercase tracking-[1px]">
           XX99 Mark II Headphones
         </h1>
         <p className="mb-7 text-[15px] leading-[25px]">
@@ -41,7 +41,7 @@ export default function Home() {
           categoryName="Earphones"
         />
       </section>
-      <section className="relative mx-auto mb-6 h-[600px] w-[327px] overflow-hidden bg-primary px-6 text-center text-white">
+      <section className="relative mx-auto mb-6 h-[600px] w-[327px] overflow-hidden rounded-lg bg-primary px-6 text-center text-white">
         <Image
           className="absolute -left-[147px] -top-[135px] max-w-max"
           src="/home/desktop/pattern-circles.svg"
@@ -60,7 +60,7 @@ export default function Home() {
             className="mx-auto mb-8 mt-[55px] h-[200px] w-[170px]"
           />
         </picture>
-        <h2 className="mb-6 text-4xl font-bold tracking-[1px] uppercase">
+        <h2 className="mb-6 text-4xl font-bold uppercase tracking-[1px]">
           ZX9 <br />
           SPEAKER
         </h2>
@@ -70,7 +70,7 @@ export default function Home() {
         </p>
         <SecondaryButton>See Product</SecondaryButton>
       </section>
-      <section className="relative mx-auto h-[320px] w-[327px] p-6 flex flex-col justify-center items-start">
+      <section className="relative mx-auto mb-6 flex h-[320px] w-[327px] flex-col items-start justify-center overflow-hidden rounded-lg p-6">
         <picture className="absolute left-0 top-0 -z-10">
           <source
             srcSet="/home/tablet/image-speaker-zx7.jpg"
@@ -82,8 +82,29 @@ export default function Home() {
             className="mx-auto"
           />
         </picture>
-        <h2 className="z-10 text-[28px] leading-[38px] tracking-[2px] font-bold uppercase mb-8">ZX7 SPEAKER</h2>
+        <h2 className="z-10 mb-8 text-[28px] font-bold uppercase leading-[38px] tracking-[2px]">
+          ZX7 SPEAKER
+        </h2>
         <OutlineButton>See Product</OutlineButton>
+      </section>
+      <section className="mb-[120px]">
+        <picture>
+          <source
+            srcSet="/home/tablet/image-earphones-yx1.jpg"
+            media="(min-width: 768px)"
+          />
+          <img
+            src="/home/mobile/image-earphones-yx1.jpg"
+            alt="zx7 speaker"
+            className="mx-auto mb-6 h-[200px] w-[327px] rounded-lg"
+          />
+        </picture>
+        <div className="mx-auto flex h-[200px] w-[327px] flex-col items-start justify-center rounded-lg bg-gray-light p-6">
+          <h2 className="mb-8 text-[28px] font-bold uppercase leading-[28px] tracking-[2px]">
+            YX1 EARPHONES
+          </h2>
+          <OutlineButton>See Product</OutlineButton>
+        </div>
       </section>
     </main>
   );
@@ -121,9 +142,3 @@ const ShopCategory = ({
     <div className="absolute bottom-0 -z-10 h-[165px] w-[327px] rounded-lg bg-gray-light"></div>
   </div>
 );
-
-// const ShopCategory = ({ children, ...props }: { children: React.ReactNode }) => (
-// 		<div>
-
-// 		</div>
-// 	);
